@@ -16,6 +16,9 @@ def home():
 @app.route('/template')
 def template():
     return render_template('index.html')
+@app.route('/favicon.ico')
+def home2():
+    return "<h1 style='color:blue' >hola mundo 2, este es el home.</h1>"
 @app.route('/api/api-inventario-gv', methods=['GET'])#metodo get de la api inventario
 async def api_inventario():
     url = 'https://api-inventario-gv.herokuapp.com/stock'
